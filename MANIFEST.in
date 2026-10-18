@@ -1,0 +1,4 @@
+include LICENSE THIRD_PARTY.md README.md QUICKSTART.zh-CN.md VALIDATION.md requirements.txt
+include .gitattributes .gitignore
+recursive-include tests *.py
+recursive-include cmu_to_smplx *.json

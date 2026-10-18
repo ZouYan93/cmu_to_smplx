@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmu-to-smplx"
+version = "0.1.0"
+description = "Portable retained CMU cgspeed BVH / ASF to SMPL-X body rotation mapping"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23", "scipy>=1.14"]
+
+[project.scripts]
+cmu-to-smplx = "cmu_to_smplx.cli:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY.md"]
+
+[tool.setuptools.packages.find]
+include = ["cmu_to_smplx*"]
+
+[tool.setuptools.package-data]
+cmu_to_smplx = ["calibration.json"]
